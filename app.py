@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Return homepage."""
-    query = request.args.get('q')
+    query = request.args.get('query')
     apikey = "ZCVPPAQIZYXS"
     lmt = 8
     
@@ -29,14 +29,13 @@ def index():
 
     # get the top 8 GIFs for the search term
     r = requests.get(
-       "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s", params)
+       "https://api.tenor.com/v1/search", params)
 
     if r.status_code == 200:
         # load the GIFs using the urls for the smaller GIF sizes
-        top_8gifs = json.loads(r.content)
-        return top_8gifs
+        gifs = json.loads(r.content)['results']
     else:
-        top_8gifs = None
+        gifs = None
 
 
     # continue a similar pattern until the user makes a selection or starts a new search.

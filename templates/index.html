@@ -1,6 +1,18 @@
 <!-- templates/index.html -->
+{% extends 'base.html' %}
 
-Hello Beautiful Whirrrled!
+{% block title %}
+    GIF search
+{% endblock %}
+
+{% block body %}
+<form action='/'>
+    <p>
+        Search for GIFs
+        <input type="text" query="query"/>
+        <button type="submit">Submit</button>
+    </p>
+
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
@@ -10,3 +22,5 @@ Hello Beautiful Whirrrled!
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
+</form>
+{% endblock %}
