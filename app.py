@@ -7,27 +7,24 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Return homepage."""
-    query = request.args.get('query')
-    apikey = "ZCVPPAQIZYXS"
-    lmt = 8
     
     # TODO: Extract the query term from url using request.args.get()
-    # q = request.args.get("q")
+    query = request.args.get('query')
+    apikey = "ZCVPPAQIZYXS"
+    lmt = 10
     
     # TODO: Make 'params' dictionary containing:
     # a) the query term, 'q'
     # b) your API key, 'key'
     # c) how many GIFs to return, 'limit'
+    
     params = {
     "q": query,
     "key": apikey,  # test value
     "limit": lmt
     }
 
-    # our test search
-    # q = "excited"
-
-    # get the top 8 GIFs for the search term
+    # get the GIFs for the search term
     r = requests.get(
        "https://api.tenor.com/v1/search", params)
 
@@ -54,7 +51,7 @@ def index():
         # TODO: Render the 'index.html' template, passing the list of gifs as a
         # named parameter called 'gifs'
 
-    return render_template("index.html")
+    return render_template("index.html", gifs=gifs)
 
 if __name__ == '__main__':
     app.run(debug=True)
