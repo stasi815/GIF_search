@@ -2,6 +2,9 @@
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 {% extends 'base.html' %}
 
+<link rel="stylesheet" href=../static/style/styles.css>
+
+
 {% block title %}
     GIF search
 {% endblock %}
@@ -10,17 +13,22 @@
     send us to the same route. -->
 {% block body %}
 <form method="get" action='/'>
-    <p>
+    <div>
         Search for GIFs
-        <input type="text" name="q"/>
+        <input class="search-txt" type="query" name="query" placeholder="Enter your search term"/>
         <button type="submit">Submit</button>
-    </p>
+    </div>
 
 </form>
 
 
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
+<div>
+    {% for gif in gifs %}
+        {% include 'gif.html' %}
+    {% endfor %}
+</div>
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 
 
