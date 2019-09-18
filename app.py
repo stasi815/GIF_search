@@ -21,7 +21,7 @@ def index():
     params = {
     "q": query,
     "key": apikey,  # test value
-    "limit": int(lmt)
+    "limit": lmt
     }
 
     # our test search
