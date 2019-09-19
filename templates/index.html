@@ -3,18 +3,14 @@
 {% extends 'base.html' %}
 
 {% block title %}GIF search{% endblock %}
-<link rel="stylesheet" href="/static/style.css">
-{%block head%}  
-
-    {{ super() }}
-
-{% endblock %}
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
 
 {% block content %}
+
+<link rel="stylesheet" type="text/css" href="../static/style.css">
 
 <div class="search_bar">
     <form method="get" target='/'>
@@ -37,6 +33,5 @@
         {% include 'gif.html' %}
     {% endfor %}
 </div>
-
 
 {% endblock %}
