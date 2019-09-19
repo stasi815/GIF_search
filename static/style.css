@@ -1,9 +1,21 @@
+
+
+
+
 h1 {
     color: #2f3640;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Courier", Courier, monospace;
     text-align: center;
+    padding: 100px;
+    background-color: aliceblue;
   }
 
+body {
+    background-color: rgb(79, 79, 79);
+    text-align: center;
+    color: aliceblue;
+}
+  
 .title {
 
     text-align: center;
@@ -13,12 +25,14 @@ h1 {
 .search_bar {
 
     text-align: center;
-    color: darkblue;
-
 }
 
-.srch_btn {
-
-    color: lightskyblue;
-
+.gifs_container {
+    padding: 20px;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 75px;
+    display: block;
+    margin: 0 auto;
+    width: 400px;
 }

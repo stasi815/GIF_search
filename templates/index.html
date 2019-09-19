@@ -3,14 +3,13 @@
 {% extends 'base.html' %}
 
 {% block title %}GIF search{% endblock %}
+<link rel="stylesheet" href="/static/style.css">
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
 
 {% block content %}
-
-<link rel="stylesheet" type="text/css" href="../static/style.css">
 
 <div class="search_bar">
     <form method="get" action='/'>
@@ -19,7 +18,7 @@
         
        <p>
             Search for GIFs
-            <input class="srch_txt" type="query" name="query" placeholder="Search Tenor"/>
+            <input class="srch_txt" type="query" name="query" placeholder="Enter your search term"/>
             <button class="srch_btn" type="submit">Submit</button>
         </p>
     </form>
@@ -28,10 +27,11 @@
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 
-<div>
+<div class="gifs_container">
     {% for gif in gifs %}
         {% include 'gif.html' %}
     {% endfor %}
 </div>
+
 
 {% endblock %}
