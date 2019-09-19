@@ -1,13 +1,9 @@
-
-
-
-
 h1 {
     color: #2f3640;
     font-family: "Courier New", Courier, monospace;
     text-align: center;
   }
-  
+
 .title {
 
     text-align: center;
@@ -17,4 +13,12 @@ h1 {
 .search_bar {
 
     text-align: center;
+    color: darkblue;
+
+}
+
+.srch_btn {
+
+    color: lightskyblue;
+
 }
