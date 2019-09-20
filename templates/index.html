@@ -1,19 +1,23 @@
 <!-- templates/index.html -->
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 {% extends 'base.html' %}
+<!-- allows formatting from index.html to be added to base.html -->
 
 {% block title %}GIF search{% endblock %}
 <link rel="stylesheet" href="/static/style.css">
+<!-- gives index.html access to the style sheet -->
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
 
 {% block content %}
+<!-- begins jinja coding -->
 
 <div class="search_bar">
+    <!-- sets class for css -->
     <form method="get" action='/'>
-
+        <!-- adds form elements -->
          <h1>Search for GIFs</h1>
         
        <p>
@@ -27,11 +31,13 @@
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 
+<!-- sets class for css  -->
 <div class="gifs_container">
+    <!-- pulls in tenor api content -->
     {% for gif in gifs %}
         {% include 'gif.html' %}
     {% endfor %}
 </div>
 
-
+<!-- ends jinja coding -->
 {% endblock %}
