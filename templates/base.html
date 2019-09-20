@@ -1,15 +1,19 @@
 <!-- templates/base.html -->
 <!DOCTYPE html>
+<!-- declares the document type as html-->
 <html>
+    <!-- begins html coding -->
     <head>
+        
         <link rel="stylesheet" href="/static/style.css">
-
+        <!-- allows base.html to access the stylesheet -->
         {%block head%}
 
         <meta charset="utf-8">
-        <!-- <link rel="stylesheet" type="text/css" href="/static/style.css"> -->
-        <!-- <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"> -->
+        <!-- defines the character set used -->
+        
         <title>{% block title %}{% endblock %}</title>
+        <!-- creates the title -->
 
         {% endblock %}
        
