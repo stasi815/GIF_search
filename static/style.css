@@ -25,6 +25,16 @@ body {
 .search_bar {
 
     text-align: center;
+    font-family: "Courier", Courier, monospace;
+}
+
+.srch_btn {
+
+    color: rgb(79, 79, 79);
+    padding: 5px;
+    background-color: aliceblue;
+    font-family: "Courier", Courier, monospace;
+    
 }
 
 .gifs_container {
@@ -35,4 +45,9 @@ body {
     display: block;
     margin: 0 auto;
     width: 400px;
+}
+
+.error {
+    font-family: "Courier", Courier, monospace;
+    color: rgb(79, 79, 79);
 }
